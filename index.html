@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Main CSS Link -->
-  <link rel="stylesheet" href="/ev_charge/css/style.css">
+  <link rel="stylesheet" href="/charge_ex/css/style.css">
 </head>
 <body>
 
@@ -18,8 +18,8 @@
 
     <header class="border-bottom">
       <div class="center border-side">
-        <div class="logo"><a href="/ev_charge/index.html">EV</a></div>
-        <div class="home"><a href="/ev_charge/index.html"><i class="ri-home-3-fill"></i></a></div>
+        <div class="logo"><a href="/charge_ex/index.html">EV</a></div>
+        <div class="home"><a href="/charge_ex/index.html"><i class="ri-home-3-fill"></i></a></div>
       </div>
     </header>
 
@@ -53,9 +53,19 @@
       </div>
     </footer>
 
+    <div class="loading-wrapper">
+      <div class="loading-spinner"></div>
+    </div>
+
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="/ev_charge/js/getCrt.js"></script>
+  <script src="/charge_ex/js/crtPos.js"></script>
+  <script src="/charge_ex/js/getCrt.js"></script>
+  <script>
+    $(document).ajaxComplete(function(){
+      $(".loading-wrapper").fadeOut();
+    });
+  </script>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Main CSS Link -->
-  <link rel="stylesheet" href="/ev_charge/css/style.css">
+  <link rel="stylesheet" href="/charge_ex/css/style.css">
 </head>
 <body>
 
@@ -18,25 +18,110 @@
 
     <header class="border-bottom">
       <div class="center border-side">
-        <div class="logo"><a href="/ev_charge/index.html">EV</a></div>
-        <div class="home"><a href="/ev_charge/index.html"><i class="ri-home-3-fill"></i></a></div>
+        <div class="logo"><a href="/charge_ex/index.html">EV</a></div>
+        <div class="home"><a href="/charge_ex/index.html"><i class="ri-home-3-fill"></i></a></div>
       </div>
     </header>
 
     <section class="map-sec">
-      <div class="map" id="map"></div>
+      <div class="center border-side">
+        <div class="map" id="map"></div>
+      </div>
+    </section>
+
+    <section class="map-lists">
+
+      <div class="lists">
+        <div class="list-up-down">
+          <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <div class="item-list border-top border-bottom">
+          <!-- <div class="item">
+            <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
+            <div class="stats">
+              <span>상태 : 충전중</span>
+              <span>타입 : 급속</span>
+              <span>갱신 : 2022-11-11 11:07:34</span>
+              <span>위치 : 3km</span>
+            </div>
+          </div>
+          <div class="item">
+            <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
+            <div class="stats">
+              <span>상태 : 충전중</span>
+              <span>타입 : 급속</span>
+              <span>갱신 : 2022-11-11 11:07:34</span>
+              <span>위치 : 3km</span>
+            </div>
+          </div>
+          <div class="item">
+            <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
+            <div class="stats">
+              <span>상태 : 충전중</span>
+              <span>타입 : 급속</span>
+              <span>갱신 : 2022-11-11 11:07:34</span>
+              <span>위치 : 3km</span>
+            </div>
+          </div>
+          <div class="item">
+            <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
+            <div class="stats">
+              <span>상태 : 충전중</span>
+              <span>타입 : 급속</span>
+              <span>갱신 : 2022-11-11 11:07:34</span>
+              <span>위치 : 3km</span>
+            </div>
+          </div>
+          <div class="item">
+            <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
+            <div class="stats">
+              <span>상태 : 충전중</span>
+              <span>타입 : 급속</span>
+              <span>갱신 : 2022-11-11 11:07:34</span>
+              <span>위치 : 3km</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
     </section>
 
     <footer class="border-top">
       <div class="center border-side">
         <p>&copy; Copyright 2013</p>
-        <p>Powered by MongProject - Developed By Marshall</p>
+        <p>Powered by MongProject</p>
+        <p>Developed By Marshall</p>
       </div>
     </footer>
+
+    <div class="loading-wrapper">
+      <div class="loading-spinner"></div>
+    </div>
 
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="/ev_charge/js/getCrtLists.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0ce2f533f8a4c7bb19f779fff32f68f"></script>
+  <script src="/charge_ex/js/crtPos.js"></script>
+  <script src="/charge_ex/js/getCrtLists.js"></script>
+  <script>
+    $(function(){
+      const h = $('footer.border-top').outerHeight();
+      $(".map-lists").css({bottom: h + 3 + 'px'});
+
+      $(".map-lists .list-up-down").on('click', function(){
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+          $(this).find("i").attr('class', 'ri-arrow-down-s-line');
+        } else {
+          $(this).find("i").attr('class', 'ri-arrow-up-s-line');
+        }
+      });
+    });
+  </script>
+  <script>
+    $(document).ajaxComplete(function(){
+      $(".loading-wrapper").fadeOut();
+    });
+  </script>
 </body>
 </html>
