@@ -55,9 +55,8 @@ footer .center{text-align:center; padding:1rem;}
 .map-sec{width:100%; height:100vh;}
 .map-sec .center{width:100%; height:100%;}
 
-.map-lists{position:fixed; width:100%; height:auto;}
+.map-lists{position:fixed; width:100%; height:auto; _padding:.25rem;}
 .map-lists .lists .list-up-down{width:100%; height:auto; background:rgb(224, 228, 228); color:rgb(34, 36, 41); font-size:1.1rem; text-align:center; padding:.25rem 0;}
-.item-list{display:none;}
 .map-lists .lists .list-up-down.active + .item-list{display:block;}
 .map-lists .item-list{padding:.25rem; border-top:1px solid rgb(92, 96, 105);}
 .map-lists .item-list p{width:100%; height:auto; padding:.25rem; background:rgb(224, 228, 228); color:rgb(34, 36, 41); text-align:center;}
@@ -80,6 +79,8 @@ footer .center{text-align:center; padding:1rem;}
 .map-lists .item-list .item .stats span{width:calc(50% - .125rem); text-align:center;  background:rgb(224, 228, 228); color:rgb(34, 36, 41); padding:.25rem 0;}
 .map-lists .item-list .item .stats span:nth-child(4){display:flex; align-items: center; justify-content: center;}
 .map-lists .item-list p{width:100%; height:auto; padding:.25rem; background:rgb(224, 228, 228); color:rgb(34, 36, 41); text-align:center; margin-bottom:.25rem;}
+
+.item-list button{border:none; width:100%; text-align:center; padding:.5rem 0;}
 
 /* Loading Effect Style */
 :root {

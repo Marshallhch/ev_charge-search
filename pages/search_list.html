@@ -30,12 +30,14 @@
     </section>
 
     <section class="map-lists">
-
-      <div class="lists">
+      <div class="center">
+        <div class="lists">
         <div class="list-up-down">
           <i class="ri-arrow-up-s-line"></i>
         </div>
         <div class="item-list border-top border-bottom">
+          <div class="items"></div>
+          <button>더보기</button>
           <!-- <div class="item">
             <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
             <div class="stats">
@@ -81,6 +83,8 @@
               <span>위치 : 3km</span>
             </div>
           </div> -->
+          
+        </div>
         </div>
       </div>
     </section>
@@ -106,7 +110,7 @@
   <script>
     $(function(){
       const h = $('footer.border-top').outerHeight();
-      $(".map-lists").css({bottom: h + 3 + 'px'});
+      $(".map-lists").css({bottom: h + 'px'});
 
       $(".map-lists .list-up-down").on('click', function(){
         $(this).toggleClass('active');
